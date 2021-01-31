@@ -14,11 +14,16 @@ new Vue({
       return this.counter > 3  ? 'up 3' : 'down 3'
     }
   },
-  methods: {
-    // 関係ないクリックイベントが発火した時も再描画されるので、問題
-    lessThanThreeMethod(){
-      console.log('methods');
-      return this.counter > 3  ? 'up 3' : 'down 3'
+  // watch: 特定のデータが変わったときに使用する
+  // Computedでカバーできないときに使う（非同期処理とか
+  watch: {
+    counter: function(){
+      // settimeout内でthisを使えないのでここで定義
+      const vm = this;
+      setTimeout(function() {
+        vm.counter = 0
+      }, 3000)
     }
-  }
+
+  } 
 })

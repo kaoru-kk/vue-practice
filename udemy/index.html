@@ -12,9 +12,6 @@
     <button @click='otherCounter += 1'>other +1</button>
     <p>{{ otherCounter }}</p>
     <p>{{ lessThanThreeComputed }}</p>
-    <!-- メソッドはいつ実行される？　→　再描画されたときに毎回実行されてしまう -->
-    <!-- 関係ないクリックイベントが発火した時も再描画されるので、問題〜 -->
-    <p>{{ lessThanThreeMethod() }}</p>
 
   </div>
 
