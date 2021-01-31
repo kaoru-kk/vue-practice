@@ -1,17 +1,15 @@
 new Vue({
   el: '#app',
   data: {
-    isActive: true,
-    color: 'red',
-    bg: 'bg-blue'
-  },
-  computed: {
-    classObject () {
-      return {
-        red: this.isActive,
-        'bg-blue': !this.isActive
-      }
+    textColor: 'red',
+    bgBlue: 'blue',
+    // can below
+    styleObject: {
+      color: 'red',
+      'background-color' : 'blue'
+    },
+    baseStyles: {
+      fontSize: '80px'
     }
-    
   }
 })

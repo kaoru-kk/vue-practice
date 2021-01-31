@@ -8,11 +8,11 @@
 </head>
 <body>
   <div id='app'>
-    <h1 :class="classObject">hello</h1>
-    <button @click="isActive = !isActive">switch</button>
+    <h1 :style="{color: textColor, 'background-color' : bgBlue }">hello</h1>
+    <h2 :style="styleObject">fefefef</h2>
 
-    <!-- 配列もおける -->
-    <h1 :class="[color, bg]"> test </h1>
+    <!-- 配列構文 -->
+    <h3 :style="[styleObject, baseStyles]">gegegegeg</h3>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
