@@ -42,6 +42,10 @@
       <!-- <a v-on:click.prevent.stop href="https://google.com">google</a> -->
     </p>
     <p>X: {{x }} Y: {{y}} </p>
+    
+    <!-- key修飾子  -->
+    <!-- enterを入力した時発火（spaceもある) -->
+    <input type="text" v-on:keyup.enter='keyUpAlert'>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

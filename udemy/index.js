@@ -38,6 +38,9 @@ new Vue({
     // デフォの挙動を妨げる
     noClickEvent(event){
       event.preventDefault();
+    },
+    keyUpAlert(){
+      alert('eeee')
     }
   }
 })
