@@ -28,7 +28,19 @@
 
     <!-- イベントオブジェクト -->
     <!-- 普通の引数とeventを使いたい時は＄をつけると -->
-    <p v-on:mousemove='changeMousePosition("test", $event)'>マウスを載せてください</p>
+    <!-- .stopはイベント修飾子 -->
+    <p v-on:mousemove='changeMousePosition("test", $event)'>
+      マウスを載せてください
+      <!-- .stopはイベント修飾子 -->
+      <span v-on:mousemove.stop>反応させない場所</span>
+      <!-- <span v-on:mousemove='noEvent'>反応させない場所</span> -->
+
+      <!-- .preventはイベント修飾子 -->
+      <a v-on:click.prevent href="https://google.com">google</a>
+      <!-- <a v-on:click='noClickEvent' href="https://google.com">google</a> -->
+      <!-- イベント修飾子はつなげられる -->
+      <!-- <a v-on:click.prevent.stop href="https://google.com">google</a> -->
+    </p>
     <p>X: {{x }} Y: {{y}} </p>
   </div>
 

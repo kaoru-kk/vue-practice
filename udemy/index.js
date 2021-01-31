@@ -30,7 +30,14 @@ new Vue({
     changeMousePosition(text, event){
       this.x = event.clientX;
       this.y = event.clientY;
-      console.log(text);
+    },
+    //.stopイベント修飾子は以下メソッドをやってくれている
+    noEvent(event){
+      event.stopPropagation();
+    },
+    // デフォの挙動を妨げる
+    noClickEvent(event){
+      event.preventDefault();
     }
   }
 })
