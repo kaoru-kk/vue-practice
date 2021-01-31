@@ -1,10 +1,15 @@
 new Vue({
   el: '#app',
-  // model
-  // viewとmodelが結合されている（双方向バインディング）
-  // viewからmodelをいじる方法がなかったが双方向バインディングでできる
-
   data: {
-    message: 'hello'
+    counter: 0
+    // date同士は参照できない
+    // NG:　lessThanThree: this.count
+  },
+  // 算出プロパティ
+  // dataプロパティのように扱う
+  computed: {
+    lessThanThree(){
+      return this.counter > 3  ? 'up 3' : 'down 3'
+    }
   }
 })

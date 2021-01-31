@@ -7,10 +7,9 @@
 </head>
 <body>
   <div id='app'>
-    <!-- view -->
-    <!-- v-modelの値を変えると、viewからmodelのdataを変更できる -->
-    <input type="text" v-model='message'>
-    <h1>{{ message }}</h1>
+    <p>{{ counter }}</p>
+    <button @click='counter += 1'>+1</button>
+    <p>{{ lessThanThree }}</p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
