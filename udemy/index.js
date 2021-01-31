@@ -1,11 +1,10 @@
 new Vue({
-	el: '#app',
+  el: '#app',
+  // model
+  // viewとmodelが結合されている（双方向バインディング）
+  // viewからmodelをいじる方法がなかったが双方向バインディングでできる
+
   data: {
-    number: 0
-  },
-  methods: {
-    countUp(){
-      this.number += 1
-    }
+    message: 'hello'
   }
 })
