@@ -7,45 +7,8 @@
 </head>
 <body>
   <div id='app'>
-    <p v-once>{{ message }}</p>
-    
-    <button v-on:click='reverseMessage'>
-      click!
-    </button>
-    <p v-text='message'></p>
-    <div v-html='html'></div>
-
-    <a v-bind:href="url">google</a>
-    <a :href="url">google</a>
-    <a :[attribute]="url" :id="number">google</a>
-
-    <a v-bind="{href: url, id: number}">google</a>
-
-    <a v-bind="hrefObject">google</a>
-
     <p>現在{{ number }}回クリックされています</p>
     <button v-on:click="countUp">カウントアップ</button>
-
-    <!-- イベントオブジェクト -->
-    <!-- 普通の引数とeventを使いたい時は＄をつけると -->
-    <!-- .stopはイベント修飾子 -->
-    <p v-on:mousemove='changeMousePosition("test", $event)'>
-      マウスを載せてください
-      <!-- .stopはイベント修飾子 -->
-      <span v-on:mousemove.stop>反応させない場所</span>
-      <!-- <span v-on:mousemove='noEvent'>反応させない場所</span> -->
-
-      <!-- .preventはイベント修飾子 -->
-      <a v-on:click.prevent href="https://google.com">google</a>
-      <!-- <a v-on:click='noClickEvent' href="https://google.com">google</a> -->
-      <!-- イベント修飾子はつなげられる -->
-      <!-- <a v-on:click.prevent.stop href="https://google.com">google</a> -->
-    </p>
-    <p>X: {{x }} Y: {{y}} </p>
-    
-    <!-- key修飾子  -->
-    <!-- enterを入力した時発火（spaceもある) -->
-    <input type="text" v-on:keyup.enter='keyUpAlert'>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
